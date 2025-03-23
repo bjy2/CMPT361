@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<title>CMPT 361 HW1 - Enter your name and surname</title>
+
+</head> <body>
+
+<h2>CMPT 361 - Homework 1</h2>
+
+<p>Name: <b>Brandon Jiaxuan Yang</b></p>
+<p>Student No: <b>301558726</b></p>
+<p>Date: Sep 27, 2024</p>
+
+<h4>Honor statement:</h4>
+<p>I have not cheated in any way when doing this assignment, I did it on my own. I may have asked questions about the assignment on Coursys, I know that’s totally fine and even encouraged. I also already know that this class is graded on a curve. I realize that if I cheat and by some miracle not get caught, any increase in my grade will in turn shift the curve and result in lower grades for my classmates. Any undeserved extra grade would come at the cost of all others. That’s horrible! I would never do it.</p>
+
+<h4>1: Take two photographs</h4>
+<img src="HP.png" alt="HP" width="300" height="300">
+<img src="LP.png" alt="LP" width="300" height="300">
+
+
+<h4>2: Compute frequency representations</h4>
+<p>Frequency representations are divided by 50</p>
+<img src="HP-freq.png" alt="HP-freq" width="300" height="300">
+<img src="LP-freq.png" alt="LP-freq" width="300" height="300">
+
+<h4>3: Visualize kernels</h4>
+<img src="gaus-surf.png" alt="gaus-surf" width="300" height="300">
+<img src="dog-surf.png" alt="dog-surf" width="300" height="300">
+<br><br>
+<p>Frequency representations are divided by 20</p>
+<img src="HP-filt.png" alt="HP-filt" width="300" height="300">
+<img src="HP-filt-freq.png" alt="HP-filt-freq" width="300" height="300">
+<br><br>
+<img src="LP-filt.png" alt="LP-filt" width="300" height="300">
+<img src="LP-filt-freq.png" alt="LP-filt-freq" width="300" height="300">
+<br><br>
+<p>Frequency representations are divided by 50</p>
+<img src="HP-dogfilt.png" alt="HP-dogfilt" width="300" height="300">
+<img src="HP-dogfilt-freq.png" alt="HP-dogfilt-freq" width="300" height="300">
+<br><br>
+<img src="LP-dogfilt.png" alt="LP-dogfilt" width="300" height="300">
+<img src="LP-dogfilt-freq.png" alt="LP-dogfilt-freq" width="300" height="300">
+
+<h4>4: Anti-aliasing</h4>
+<img src="HP-sub2.png" alt="HP-sub2" width="300" height="300">
+<img src="HP-sub2-freq.png" alt="HP-sub2-freq" width="300" height="300">
+<br><br>
+<img src="LP-sub2.png" alt="LP-sub2" width="300" height="300">
+<img src="LP-sub2-freq.png" alt="LP-sub2-freq" width="300" height="300">
+<p>Frequency representations are divided by 50</p>
+<p>In high frequency image, Spatial Domain: Buildings begin to have jagged edges and the image becomes blurry;
+   Frequency Domain: Some high frequency components are corrupted, mainly in the four corners.</p>
+<p>In low frequency image, Spatial Domain: No explicit changes happened compared to the original image,
+   Frequency Domain: Frequency image slightly darkened, as low frequency images have less high frequency content that could cause aliasing.</p>
+
+<img src="HP-sub4.png" alt="HP-sub4" width="300" height="300">
+<img src="HP-sub4-freq.png" alt="HP-sub4-freq" width="300" height="300">
+<br><br>
+<img src="LP-sub4.png" alt="LP-sub4" width="300" height="300">
+<img src="LP-sub4-freq.png" alt="LP-sub4-freq" width="300" height="300">
+<p>Frequency representations are divided by 50</p>
+<p>In high frequency image, Spatial Domain: The aliasing artifacts are more pronounced to buildings, with even more jagged or distorted patterns.
+   Frequency Domain: More high frequency components are corrupted, the image are much darkened compared to the original one.</p>
+<p>In low frequency image, Spatial Domain: The image still hasn't changed much, except that the puppy's fur has become slightly blurred.
+   Frequency Domain: Apart from a small loss of high frequency information the image presents no major problems.</p>
+
+<img src="HP-sub2-aa.png" alt="HP-sub2-aa" width="300" height="300">
+<img src="HP-sub2-aa-freq.png" alt="HP-sub2-aa-freq" width="300" height="300">
+<br><br>
+<img src="HP-sub4-aa.png" alt="HP-sub4-aa" width="300" height="300">
+<img src="HP-sub4-aa-freq.png" alt="HP-sub4-aa-freq" width="300" height="300">
+<p>Frequency representations are divided by 50</p>
+<p>I used a 4x4 gaussian with a standard deviation of 0.7 for half of HP, and a 6x6 gaussian with a standard deviation of 0.9 for quarter of HP.</p>
+<p>These two sets of Gaussian kernels can achieve the best balance between anti-aliasing and preserving image details.</p>
+<p>Compare their frequency images of filtered to their unfiltered images, we can tell we got rid of some high frequency details and this should yield less aliasing in the image.</p>
+
+
+<h4>5: Canny edge detection thresholding</h4>
+
+<img src="HP-canny-optimal.png" alt="HP-canny-optimal" width="500" height="500">
+<br><br>
+<img src=" HP-canny-lowlow.png" alt=" HP-canny-lowlow" width="300" height="300">
+<img src=" HP-canny-highlow.png" alt=" HP-canny-highlow" width="300" height="300">
+<br><br>
+<img src=" HP-canny-lowhigh.png" alt=" HP-canny-lowhigh" width="300" height="300">
+<img src=" HP-canny-highhigh.png" alt=" HP-canny-highhigh" width="300" height="300">
+<p>I chose 1.4 times of low threshold and 0.8 times of high threshold of matlab default values for this image, and the value is [0.1487, 0.2125],
+    relative high low threshold can filter some unecessary noises and a low high threshold for high frequency
+    image can caputure more details such like windows of the building, curved road on the ground.</p>
+
+<img src="LP-canny-optimal.png" alt="LP-canny-optimal" width="500" height="500">
+<br><br>
+<img src=" LP-canny-lowlow.png" alt=" LP-canny-lowlow" width="300" height="300">
+<img src=" LP-canny-highlow.png" alt=" LP-canny-highlow" width="300" height="300">
+<br><br>
+<img src=" LP-canny-lowhigh.png" alt=" LP-canny-lowhigh" width="300" height="300">
+<img src=" LP-canny-highhigh.png" alt=" LP-canny-highhigh" width="300" height="300">
+<p>I chose 1.5 times of low threshold and 3.0 times of high threshold of matlab default values for this image, and the value is [0.0469, 0.2344],
+    which can filter many noises in the image and keep the shape of the tile texture and the dog. Although there
+    still exist some noises, if we keep increasing high threshold we will start lose some details of the dog.</p>
+
+</body>
+</html>
